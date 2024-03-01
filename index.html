@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookshelfApps</title>
+    <link id="css" rel="stylesheet" href="styles/light-styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="popupContainer" class="hidden">
+      <div class="popup">
+        <h2>
+          Are you sure you want to delete <span id="bookTitle"></span> from your
+          book list?
+        </h2>
+        <div class="popup-button-container" id="popupButtonContainer">
+          <button id="cancelButton" class="cancel-button">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <div id="editContainer" class="hidden">
+      <div class="input-book-container edit">
+        <h2>Edit Book</h2>
+        <form class="input-book" id="editForm">
+          <div class="label-field-container">
+            <label for="newTitleField">Title</label>
+            <input class="field" type="text" id="newTitleField" />
+          </div>
+
+          <div class="label-field-container">
+            <label for="newAuthorField">Author</label>
+            <input class="field" type="text" id="newAuthorField" />
+          </div>
+
+          <div class="label-field-container">
+            <label for="newYearField">Year</label>
+            <input class="field" type="number" id="newYearField" />
+          </div>
+
+          <div class="isRead-container">
+            <input type="checkbox" id="newIsReadField" />
+            <label for="newIsReadField">Finished reading</label>
+          </div>
+
+          <button
+            type="reset"
+            class="inputBook cancelBook"
+            id="cancelBookButton"
+          >
+            Cancel
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="content">
+      <div class="left-container">
+        <div class="title-mode-container" id="titleModeContainer">
+          <h1>Bookshelf Apps</h1>
+          <i id="darkModeButton" class="fa-regular fa-moon"></i>
+          <i id="lightModeButton" class="fa-regular fa-sun"></i>
+        </div>
+        <form class="search-container" id="searchForm">
+          <label for="searchField"><h2>Search</h2></label>
+          <div class="search-bar-container">
+            <input
+              class="field"
+              type="text"
+              placeholder="Search here"
+              id="searchField"
+            />
+            <button type="submit" id="searchButton">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </form>
+
+        <div class="input-book-container">
+          <h2>Input a book</h2>
+          <form class="input-book" id="inputForm">
+            <div class="label-field-container">
+              <label for="titleField">Title</label>
+              <input class="field" type="text" id="titleField" />
+            </div>
+
+            <div class="label-field-container">
+              <label for="authorField">Author</label>
+              <input class="field" type="text" id="authorField" />
+            </div>
+
+            <div class="label-field-container">
+              <label for="yearField">Year</label>
+              <input class="field" type="number" id="yearField" />
+            </div>
+
+            <div class="isRead-container">
+              <input type="checkbox" id="isReadField" />
+              <label for="isReadField">Finished reading</label>
+            </div>
+            <button type="submit" class="inputBook" id="submitBook">
+              Input Book
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="mid-container">
+        <div class="mid">
+          <h2>Reading</h2>
+          <div class="books-container" id="readingBookContainer"></div>
+        </div>
+      </div>
+      <div class="right-container">
+        <div class="right">
+          <h2>Finished Reading</h2>
+          <div class="books-container" id="readBookContainer"></div>
+        </div>
+      </div>
+    </div>
+    <script src="script/index.js"></script>
+  </body>
+</html>
