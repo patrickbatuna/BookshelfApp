@@ -82,7 +82,7 @@ function addBook() {
   const id = generateId();
   const title = titleField.value;
   const author = authorField.value;
-  const year = yearField.value;
+  const year = parseInt(yearField.value);
   const isRead = isReadField.checked;
 
   const bookObject = generateBookObject(id, title, author, year, isRead);
@@ -186,7 +186,7 @@ function editBook(bookObject) {
 
   newTitleField.value = bookObject.title;
   newAuthorField.value = bookObject.author;
-  newYearField.value = bookObject.year;
+  newYearField.value = parseInt(bookObject.year);
   newIsReadField.checked = bookObject.isRead;
 
   cancelBookButton.addEventListener("click", function () {
