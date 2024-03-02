@@ -121,6 +121,7 @@ p {
   background-color: #106efb;
   border-radius: 6px;
   border: none;
+  align-items: center;
 }
 
 .input-book-container {
@@ -318,4 +319,37 @@ p {
 
 .popup-button-container > button.delete-button {
   background-color: red;
+}
+
+@media screen and (max-width: 800px) {
+  .content {
+    flex-direction: column;
+    padding: 16px;
+    height: fit-content;
+  }
+  .title-mode-container {
+    background-color: white;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    padding-block: 12px;
+  }
+
+  .search-bar-container > button {
+    font-size: 0.9rem;
+  }
+  .popup-container,
+  .edit-container {
+    position: fixed;
+    padding-top: 16vh;
+    padding-inline: 4vh;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .popup,
+  .edit {
+    width: 100vh;
+  }
 }
